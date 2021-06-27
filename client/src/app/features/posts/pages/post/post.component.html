@@ -1,0 +1,29 @@
+<h1>JsonPlaceHolder Api</h1>
+
+<div class="col-12">
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">userId</th>
+      <th scope="col">id</th>
+      <th scope="col">title</th>
+      <th scope="col">body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let post of posts | paginate: { itemsPerPage: 10, currentPage: page }">
+      <td> {{post.userId}} </td>
+      <td> {{post.id}} </td>
+      <td> {{post.title}} </td>
+      <td> {{post.body}} </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<pagination-controls (pageChange)="page = $event"
+previousLabel="Anterior"
+nextLabel="Siguiente">
+</pagination-controls>

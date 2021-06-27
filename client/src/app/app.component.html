@@ -1,0 +1,45 @@
+<!--<app-navbar></app-navbar> -->
+<!--<app-header></app-header> -->
+
+<!-- No pude solucionar el tema del navbar solamente poniendolo directamente aca anda-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand">Proyecto Final PWA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            JsonPlaceHolder Api
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="photos">Photos</a></li>
+            <li><a class="dropdown-item" routerLink="post">Posts</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="crud">Crud</a>
+        </li>
+      </ul>
+      <div>
+        <form class="d-flex">
+          <a class="btn btn-dark" routerLink="account/login">Logueate</a>
+        <a class="btn btn-dark" routerLink="account/registro">Registrate</a>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>
