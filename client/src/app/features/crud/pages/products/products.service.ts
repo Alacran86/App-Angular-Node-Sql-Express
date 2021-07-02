@@ -14,7 +14,9 @@ export class ProductsService extends BaseService {
     this.setEndPoint(`productos/single/${id}`);
     return this.get();
   }
-  delete(id: number) {
-    this.setEndPoint(`productos`) // Crear una ruta para eliminar productos desde el back
+  deleted(id: number) {
+     this.setEndPoint(`productos/modify/${id}`);
+    return this.put();
+    // Crear una ruta para eliminar productos desde el back
     }
 }

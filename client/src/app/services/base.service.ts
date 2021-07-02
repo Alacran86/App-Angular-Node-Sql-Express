@@ -44,6 +44,20 @@ export class BaseService {
       return this.handlerError(e);
     }
   }
+  async put() {
+    try {
+      return await this.http.put(`${this.urlServidor}/${this.endPoint}`,  this.HttpOptions()).toPromise();
+    } catch (e) {
+      return this.handlerError(e);
+    }
+  }
+  async delete(id: number) {
+    try {
+      return await this.http.delete(`${this.urlServidor}/${this.endPoint}`, this.HttpOptions()).toPromise();
+    } catch (e) {
+      return this.handlerError(e);
+    }
+  }
 
   handlerError({ status }: any) {
     if (status === 404) {

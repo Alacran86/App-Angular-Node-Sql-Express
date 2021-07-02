@@ -11,9 +11,6 @@ const routes: Routes = [
   {
    path: 'update/:id',
    component: ProductComponent
-  },
-  {
-    path:'update'
   }
 ];
 

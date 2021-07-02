@@ -4,10 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CrudRoutingModule } from './crud-routing.module';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductComponent } from './pages/product/product.component';
-import { UpdateProductComponent } from './pages/update-product/update-product.component';
 
 @NgModule({
-  declarations: [ProductsComponent, ProductComponent, UpdateProductComponent],
+  declarations: [ProductsComponent, ProductComponent],
   imports: [
     CommonModule,
     CrudRoutingModule,

@@ -11,7 +11,6 @@ import { ProductsService } from '../products/products.service';
 export class ProductComponent implements OnInit {
   loaded: boolean = false;
   product: any = {};
-  register:any;
   constructor(private service: ProductsService, private activatedRoute: ActivatedRoute, private swal: SwalService, private router: Router) { }
 // <!--Crear un Servicio para que entre en la ruta router.put('/modify/:id',validateModify, modify);-->
 
