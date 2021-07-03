@@ -9,12 +9,17 @@ const cors = require('cors');
 const dotenv = require("dotenv");
 dotenv.config();
 
+const {logeado} = require('./middlewares/logged');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const postRouter = require('./routes/post')
 const photosRouter = require('./routes/photos');
 const productosRouter = require('./routes/productos');
 const categoriasRouter = require('./routes/categorias');
+const registroRouter = require('./routes/registro');
+const personasRouter = require('./routes/personas');
+const authRouter = require('./routes/auth');
+const perfil = require('./routes/perfil');
 
 const app = express();
 
@@ -35,6 +40,11 @@ app.use('/post', postRouter);
 app.use('/photos', photosRouter);
 app.use('/productos', productosRouter);
 app.use('/categorias', categoriasRouter);
+app.use('/registro', registroRouter);
+app.use('/personas', personasRouter);
+app.use('/auth', authRouter);
+app.use('/perfil',logeado, perfil);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
