@@ -12,8 +12,7 @@ const auth = async (req, res) => {
         pass = sha1(pass);
         const [user] = await model.isLogged(username, pass);
         console.log(user);
-        // consulta de BDD me devuelve un RowDataPacket ([{}])
-        // ! Negado, !user (si no hya usuario) !user.habilitado (si no esta habilitado)
+    
         if (!user) res.sendStatus(401);
         else if(!user.habilitado) res.send("verifique su mail!!");
         else if(user.habilitado) {

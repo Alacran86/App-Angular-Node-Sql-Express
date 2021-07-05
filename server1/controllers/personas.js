@@ -15,5 +15,9 @@ const modify = (req, res) => {
     }
     model.modify(req.params.id, req.body).then((response) => res.json(response)).catch((err) => res.status(500).json(err))
 }
+const create = (req, res) => {
+    req.body.pass= sha1(req.body.pass);
+    model.create(req.body).then((response) => res.json(response)).catch((err) => res.status(500).json(err));
+}
 
-module.exports = { get, single, modify};
+module.exports = { get, single, modify, create};
