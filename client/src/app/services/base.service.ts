@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class BaseService {
 
-  urlServidor: string = 'http://localhost:3000'; //'https://jsonplaceholder.typicode.com'; // url de nuestro servidor en este caso es nuestra api
+  urlServidor: string = 'http://localhost:3000';
   endPoint: string = '';
   constructor(private http: HttpClient , private router: Router) { }
 
