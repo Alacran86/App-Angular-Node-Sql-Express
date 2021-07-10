@@ -14,9 +14,21 @@ export class RegistroComponent implements OnInit {
   constructor(private service: RegistroService, private swal: SwalService, private router: Router) { }
   loaded: boolean = false;
   formObject: any = {
-    username: new FormControl('', [Validators.required]),
-    pass: new FormControl('', [Validators.required]),
-    mail: new FormControl('', [Validators.email])
+    username: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(30)
+    ]),
+    pass: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(30)
+    ]),
+    mail: new FormControl('', [
+      Validators.email,
+      Validators.minLength(3),
+      Validators.maxLength(30)
+    ])
   }
   form: FormGroup = new FormGroup(this.formObject);
 

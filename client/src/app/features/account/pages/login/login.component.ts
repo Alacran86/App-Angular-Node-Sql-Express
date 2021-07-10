@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('JWT', JWT);
       localStorage.setItem('user', JSON.stringify(info));
       this.swal.normalMessage({ html: 'Logueado!!!', timer: 5000 });
-      this.router.navigate(['registro']);
+      this.router.navigate(['productos']);
     }
     catch (e) {
       this.swal.normalMessage({ html: 'Usuario o password incorrectos', icon: 'error', timer: 5000 });

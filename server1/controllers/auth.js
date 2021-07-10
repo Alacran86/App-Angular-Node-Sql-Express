@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const sha1 = require('sha1');
 const privateKey = fs.readFileSync('./keys/private.pem');
-const signOptions = {algorithm: 'RS256', expiresIn: "2h"};
+const signOptions = {algorithm: 'RS256', expiresIn: "10h"};
 const model = require('./../models/auth');
 const createToken = (payload) => jwt.sign(payload, privateKey, signOptions);
 
