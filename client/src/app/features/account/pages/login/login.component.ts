@@ -10,8 +10,8 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loaded: boolean = false;
-  formObject = {
+    loaded: boolean = false;
+    formObject = {
     username: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup(this.formObject);
-    setTimeout(() => this.loaded = true, 2000)
+    setTimeout(() => this.loaded = true, 3000)
   }
   async login() {
     try {
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
     }
     catch (e) {
       this.swal.normalMessage({ html: 'Usuario o password incorrectos', icon: 'error', timer: 5000 });
-      this.router.navigate(['registro']);
+
     }
   }
   verifyInput(field: string) {

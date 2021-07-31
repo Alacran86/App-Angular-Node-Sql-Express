@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class BaseService {
 
-  urlServidor: string = environment.url || 'http://localhost:3000';
+  urlServidor: string = 'http://localhost:3000';
   endPoint: string = '';
   constructor(private http: HttpClient , private router: Router) { }
 
