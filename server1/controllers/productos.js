@@ -16,9 +16,5 @@ const all = (req, res) => {
       const obj = req.body;
       model.modify(req.params.id, obj).then(response => res.json(response)).catch((err) => res.status(500).json(err));
   }
-  const del = (req,res) => {
-    const {id} = req.params;
-    del(id);
-    res.end();
-  };
-  module.exports = {all, single, create, modify, del};
+ 
+  module.exports = {all, single, create, modify};

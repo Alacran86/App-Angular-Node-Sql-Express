@@ -44,9 +44,9 @@ export class BaseService {
       return this.handlerError(e);
     }
   }
-  async put() {
+  async put(obj: any) {
     try {
-      return await this.http.put(`${this.urlServidor}/${this.endPoint}`,  this.HttpOptions()).toPromise();
+      return await this.http.put(`${this.urlServidor}/${this.endPoint}`,  obj,this.HttpOptions()).toPromise();
     } catch (e) {
       return this.handlerError(e);
     }

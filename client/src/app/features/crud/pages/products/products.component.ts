@@ -25,7 +25,7 @@ export class ProductsComponent implements OnInit {
   }
   deleteProduct(id: number) {
     console.log(id);
-    this.service.deleted(id);
+
 
 
 }

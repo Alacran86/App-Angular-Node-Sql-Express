@@ -11,11 +11,7 @@ const single = (id) => bd('producto').where({"habilitado" : 1, id}).select('*');
 
 const modify = (id, obj) => bdService.modify("producto", id, obj);
 
-const del = (id, habilitado = 0) => {
-    index = productos.findIndex((producto) => producto.id == id);
-    console.log(index, habilitado);
-    productos[index]["habilitado"] = habilitado;
-    console.log(productos);
-};
 
-module.exports = {getALL, create, single, modify, del};
+
+
+module.exports = {getALL, create, single, modify};
