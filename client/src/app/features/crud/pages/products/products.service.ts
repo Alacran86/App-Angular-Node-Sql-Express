@@ -17,6 +17,8 @@ export class ProductsService extends BaseService {
   deleted(id: number, obj:any) {
      this.setEndPoint(`productos/modify/${id}`);
     return this.put(obj);
-
-    }
+  }
+  create(obj:any) {
+    this.setEndPoint(`productos/new/${obj}`);
+  }
 }
