@@ -5,7 +5,7 @@ const knex = require('knex')({
         user: "root" || process.env.BD_USER,
         password:  "" || process.env.BD_PASSWORD,
         database: "proyecto"|| process.env.BD_DB,
-        port: 3307,
+        //port: 3307,
         pool : {min : 1, max : 10}
     }
 });

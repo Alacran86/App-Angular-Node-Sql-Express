@@ -40,7 +40,7 @@ export class NewProductComponent implements OnInit {
     const { nombre, apellido } = this.form.value;
     const fd = new FormData();
     fd.append('nombre', nombre);
-    fd.append('apellido', apellido);
+    fd.append('id_categoria', apellido);
     fd.append('imagen', this.selectedFile);
     //await this.service.create(fd);
   }
