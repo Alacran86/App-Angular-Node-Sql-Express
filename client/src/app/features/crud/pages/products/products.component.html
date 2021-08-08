@@ -10,11 +10,8 @@
                 <img src="http://localhost:3000/images/{{product.imagen}}" class="card-img-top img-fluid" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">{{product.nombre}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Categoria : {{product.nombreCategoria}}</h6>
-                    <h6 class="card-subtitle mb-2 text-muted">Precio : {{product.precio}}</h6>
-                    <h6 class="card-subtitle mb-2 text-muted">Stock : {{product.stock}}</h6>
-                    <a routerLink="update/{{product.id}}" class="btn btn-secondary mx-2">Editar</a>
-                    <button class="btn btn-danger" (click)="deleteProduct(product.id)">Eliminar</button>
+                    <a routerLink="update/{{product.id}}" class="btn btn-secondary mx-2">Descripción</a>
+<!--                    <button class="btn btn-danger" (click)="deleteProduct(product.id)">Eliminar</button>  -->
                   </div>
                 </div>
           </div>

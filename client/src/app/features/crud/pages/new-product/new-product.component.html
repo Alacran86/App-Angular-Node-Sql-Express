@@ -20,8 +20,13 @@
               <div *ngIf = "imagen">
                   <img [src]="previewUrl" class="mt-4" style="width:150px; height:100px;">
               </div>
-              <button type="button" (click)="upload()" [disabled]="form.invalid" class="btn btn-primary mt-4">Enviar</button>
+              <button type="button" (click)="upload()" [disabled]="form.invalid" class="btn btn-secondary mt-4">Enviar</button>
           </form>
       </div>
   </div>
 </div>
+
+
+<div>
+  <button type="button" class="btn btn-primary mt-2" routerLink="/crud">Volver Atrás</button>
+  <div>

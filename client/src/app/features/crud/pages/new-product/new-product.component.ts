@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ProductsService } from '../products/products.service';
+import { NewproductService } from './newproduct.service';
 
 @Component({
   selector: 'app-new-product',
@@ -18,7 +18,7 @@ export class NewProductComponent implements OnInit {
     stock: new FormControl('', [Validators.required]),
 }
   form: FormGroup = new FormGroup(this.FormObject);
-  constructor(private service: ProductsService) { }
+  constructor(private service: NewproductService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup(this.FormObject);

@@ -7,8 +7,8 @@ const saveFile = (file, allowExtension, destFolder = "./public/images") => {
     console.log(file);
     const [type, ext] = file[0].mimetype.split("/"); 
     if (!allowExtension.includes(ext)) throw "Formato no permitido";
-    const uid = uuid();
-    const nombre = `${uid}.${ext}`;
+    
+    const nombre = `${ext}`;
     const dir = `${destFolder}/${nombre}`; 
     fs.createReadStream(file[0].path).pipe(fs.createWriteStream(dir)); 
     
@@ -17,7 +17,7 @@ const saveFile = (file, allowExtension, destFolder = "./public/images") => {
             throw "No se puede eliminar";
         }
     });
-    return uid;
+    
 }
 catch(e){
     throw e;
